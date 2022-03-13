@@ -21,5 +21,19 @@ namespace practice5.Controllers
             List<table1> all_data = db.table1.ToList();
             return View(all_data);
         }
+
+        public ActionResult hewlo()
+        {
+            return View();
+        }
+
+        public ActionResult SaveData(table1 table1)
+        {
+            db.table1.Add(table1);
+            db.SaveChanges();
+            return RedirectToAction("new1ko");
+        }
+         
+
     }
 }

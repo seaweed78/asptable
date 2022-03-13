@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="seaweedModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="table1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="practice5koEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="table1" EntityType="Self.table1" />
+  </EntityContainer>
+</Schema>

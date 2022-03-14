@@ -33,7 +33,18 @@ namespace practice5.Controllers
             db.SaveChanges();
             return RedirectToAction("new1ko");
         }
-         
 
+        public ActionResult edit(int id)
+        {
+            table1 data = db.table1.Find(id);
+            return View(data);
+        }
+
+        public ActionResult UpdateData(table1 obj1)
+        {
+            db.Entry(obj1).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("new1ko");
+        }
     }
 }
